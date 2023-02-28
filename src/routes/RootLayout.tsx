@@ -3,10 +3,10 @@ import { Header } from "../components/Header";
 
 export function RootLayout() {
   return (
-    <div className="relative flex h-screen w-full flex-col overflow-hidden">
+    <div className="relative flex h-screen w-full flex-col overflow-x-hidden">
       <Header />
-      <div className="container h-full">{<Outlet />}</div>
-      <footer className="hidden md:block">Footer</footer>
+      {<Outlet />}
+      <footer className="mt-auto hidden md:flex">Footer</footer>
     </div>
   );
 }
