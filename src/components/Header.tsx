@@ -50,7 +50,7 @@ export function Header() {
               className={({ isActive }) =>
                 `${
                   isActive ? "before:scale-100" : "before:scale-0"
-                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:scale-0 before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/"
               onClick={() => {
@@ -64,7 +64,7 @@ export function Header() {
               className={({ isActive }) =>
                 `${
                   isActive ? "before:scale-100" : "before:scale-0"
-                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:scale-0 before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/history"
               onClick={() => {
@@ -78,7 +78,7 @@ export function Header() {
               className={({ isActive }) =>
                 `${
                   isActive ? "before:scale-100" : "before:scale-0"
-                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:scale-0 before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/about"
               onClick={() => {
