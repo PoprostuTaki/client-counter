@@ -41,7 +41,7 @@ export function Header() {
           </svg>
         </button>
         <nav
-          className={`absolute inset-y-0 left-full flex w-full -translate-x-0 items-center justify-center bg-white/70 backdrop-blur-sm backdrop-filter transition duration-500 ease-in-out md:static md:left-0 md:w-auto md:translate-x-0 md:transition-none ${
+          className={`absolute inset-y-0 left-full flex w-full -translate-x-0 items-center justify-center bg-white/70 font-medium backdrop-blur-sm backdrop-filter transition duration-500 ease-in-out md:static md:left-0 md:w-auto md:translate-x-0 md:transition-none ${
             isOpen ? "-translate-x-full " : "-translate-x-0"
           }`}
         >
@@ -49,8 +49,8 @@ export function Header() {
             <NavLink
               className={({ isActive }) =>
                 `${
-                  isActive ? "font-medium" : "font-normal"
-                } p-2 text-center text-xl hover:opacity-75 md:text-base`
+                  isActive ? "before:scale-100" : "before:scale-0"
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/"
               onClick={() => {
@@ -63,8 +63,8 @@ export function Header() {
             <NavLink
               className={({ isActive }) =>
                 `${
-                  isActive ? "font-medium" : "font-normal"
-                } p-2 text-center text-xl hover:opacity-75 md:text-base`
+                  isActive ? "before:scale-100" : "before:scale-0"
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/history"
               onClick={() => {
@@ -77,8 +77,8 @@ export function Header() {
             <NavLink
               className={({ isActive }) =>
                 `${
-                  isActive ? "font-medium" : "font-normal"
-                } p-2 text-center text-xl hover:opacity-75 md:text-base`
+                  isActive ? "before:scale-100" : "before:scale-0"
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/about"
               onClick={() => {
