@@ -1,36 +1,34 @@
 import { useState } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 interface ClientsInDate {
-  [key: string]: number;
+  date: string;
+  clientNumber: number;
 }
 export function History() {
-  const [clientsList, setClientsList] = useState(() => {
-    const dataFromLocalStorage = localStorage.getItem("client-counter");
-    if (dataFromLocalStorage !== null) {
-      return JSON.parse(dataFromLocalStorage);
-    }
-    return undefined;
-  });
+  const [storedData, setLocalStorage] = useLocalStorage("client-counter", []);
 
   return (
-    <ul className="container flex max-w-xl flex-1 flex-col justify-center divide-y p-4 ">
-      <li className="flex h-12 items-center justify-between px-4">
+    <ul className="container flex max-w-2xl flex-col justify-center divide-y p-4">
+      <li className="flex h-12 items-center justify-between rounded-t-xl bg-zinc-100 px-4 uppercase">
         <span>Date</span>
         <span>Clients</span>
       </li>
-      {clientsList ? (
-        clientsList.map((item: ClientsInDate, index: number) => {
+      {storedData.length > 0 ? (
+        storedData.map((item: ClientsInDate, index: number) => {
           return (
             <li
-              key={`${Object.keys(item)[0]} &{index}`}
-              className="flex h-12 items-center justify-between px-4"
+              key={`${item.date} ${index}`}
+              className="flex h-12 items-center justify-between px-4 last:rounded-b-xl odd:bg-zinc-100"
             >
-              <span>{Object.keys(item)[0]}</span>
-              <span>{Object.values(item)[0]}</span>
+              <span>{item.date}</span>
+              <span>{item.clientNumber}</span>
             </li>
           );
         })
       ) : (
-        <li>asd</li>
+        <li className="flex h-12 items-center justify-center px-4 uppercase">
+          Brak danych
+        </li>
       )}
     </ul>
   );
