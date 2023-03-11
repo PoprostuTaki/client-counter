@@ -4,11 +4,6 @@ import { IconSubtractClient } from "../components/IconSubtractClient";
 import { IconAddClient } from "../components/IconAddClient";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
-interface ClientsInDate {
-  date: string;
-  clientNumber: number;
-}
-
 function Counter() {
   const [storedValue, setLocalStorage] = useLocalStorage("client-counter", [
     { date: new Date().toLocaleDateString(), clientNumber: 0 },
@@ -94,7 +89,7 @@ function Counter() {
         onClick={addOneClient}
         title="Add client"
         type="button"
-        className="mb-8 flex h-full w-full flex-shrink flex-grow items-center justify-center self-center rounded-full border-2 border-zinc-900 transition duration-200 hover:bg-zinc-900 hover:text-white"
+        className=" flex h-full w-full flex-shrink flex-grow items-center justify-center self-center rounded-full border-2 border-zinc-900 transition duration-200 hover:bg-zinc-900 hover:text-white"
       >
         <IconAddClient />
       </button>
