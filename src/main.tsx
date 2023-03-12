@@ -8,18 +8,21 @@ import { History } from "./routes/History";
 import { About } from "./routes/About";
 import { ErrorBoundary } from "./routes/ErrorBoundary";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      { path: "/", element: <Counter /> },
-      { path: "/history", element: <History /> },
-      { path: "/about", element: <About /> },
-    ],
-    errorElement: <ErrorBoundary />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        { path: "/", element: <Counter /> },
+        { path: "/history", element: <History /> },
+        { path: "/about", element: <About /> },
+      ],
+      errorElement: <ErrorBoundary />,
+    },
+  ],
+  { basename: "/client-counter" }
+);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
