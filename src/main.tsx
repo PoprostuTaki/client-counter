@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "./routes/RootLayout";
 import { History } from "./routes/History";
 import { About } from "./routes/About";
+import { ErrorBoundary } from "./routes/ErrorBoundary";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "/history", element: <History /> },
       { path: "/about", element: <About /> },
     ],
+    errorElement: <ErrorBoundary />,
   },
 ]);
 
