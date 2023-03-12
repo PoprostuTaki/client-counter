@@ -57,7 +57,7 @@ export function Header() {
                 setIsOpen(false);
               }}
             >
-              Home
+              Licznik
             </NavLink>
 
             <NavLink
@@ -71,7 +71,7 @@ export function Header() {
                 setIsOpen(false);
               }}
             >
-              History
+              Historia
             </NavLink>
 
             <NavLink
@@ -85,7 +85,7 @@ export function Header() {
                 setIsOpen(false);
               }}
             >
-              About
+              O aplikacji
             </NavLink>
           </div>
         </nav>

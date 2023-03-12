@@ -21,7 +21,7 @@ const router = createBrowserRouter(
       errorElement: <ErrorBoundary />,
     },
   ],
-  { basename: "/client-counter" }
+  { basename: "/client-counter/" }
 );
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
