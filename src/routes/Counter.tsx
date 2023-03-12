@@ -68,7 +68,7 @@ function Counter() {
       <div className="flex items-center justify-between gap-4">
         <button
           onClick={resetCounter}
-          title="Reset counter"
+          title="Zresetuj licznik"
           className="h-16 w-1/2 rounded-3xl border-2 border-zinc-900 p-2 text-xl transition duration-200 hover:bg-zinc-900 hover:text-white"
           type="button"
         >
@@ -77,7 +77,7 @@ function Counter() {
 
         <button
           onClick={subtractOneClient}
-          title="Subtract client"
+          title="Odejmij klienta"
           className="flex h-16 w-1/2 items-center justify-center rounded-3xl border-2 border-zinc-900 p-2 transition duration-200 hover:bg-zinc-900 hover:text-white"
           type="button"
         >
@@ -87,7 +87,7 @@ function Counter() {
 
       <button
         onClick={addOneClient}
-        title="Add client"
+        title="Dodaj klienta"
         type="button"
         className=" flex h-full w-full flex-shrink flex-grow items-center justify-center self-center rounded-full border-2 border-zinc-900 transition duration-200 hover:bg-zinc-900 hover:text-white"
       >
