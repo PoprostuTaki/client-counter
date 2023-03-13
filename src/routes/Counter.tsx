@@ -59,7 +59,7 @@ function Counter() {
   };
 
   return (
-    <div className="container flex max-w-2xl flex-1 flex-col justify-center gap-4 p-4">
+    <div className="container flex  max-w-2xl flex-1 flex-col justify-center gap-4 p-4">
       <div className="flex h-16 flex-shrink-0 items-center justify-between rounded-3xl border-2 border-slate-700 px-8">
         <IconClient />
         <span className="text-xl font-medium">{clientNumber}</span>
@@ -89,7 +89,7 @@ function Counter() {
         onClick={addOneClient}
         title="Dodaj klienta"
         type="button"
-        className=" flex h-full w-full flex-shrink flex-grow items-center justify-center self-center rounded-full border-2 border-zinc-900 transition duration-200 hover:bg-zinc-900 hover:text-white"
+        className="flex h-full min-h-[4rem] w-full flex-shrink flex-grow items-center justify-center self-center rounded-full border-2 border-zinc-900 transition duration-200 hover:bg-zinc-900 hover:text-white"
       >
         <IconAddClient />
       </button>
