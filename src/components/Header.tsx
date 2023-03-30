@@ -4,20 +4,20 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="border-b-2 border-b-zinc-200">
-      <div className="mx-auto flex items-center justify-between px-2 py-2 md:container md:py-2 md:px-16">
+    <header className="border-b-2 border-b-emerald-100">
+      <div className="mx-auto flex items-center justify-between px-2 py-2 text-emerald-800 md:container md:py-2 md:px-16">
         <Link to="/">
-          <h1 className="p-2 font-bold">CC</h1>
+          <h1 className="px-2 text-lg font-bold">CC</h1>
         </Link>
 
         <button
           title="navigation"
           onClick={() => setIsOpen(!isOpen)}
           type="button"
-          className="z-10 rounded-full p-1 md:hidden"
+          className="z-20 rounded-full p-1 md:hidden"
         >
           <svg
-            stroke="black"
+            stroke="darkgreen"
             fill="none"
             style={{
               transition: "rotate 0.3s, transform 0.5s",
@@ -41,7 +41,7 @@ export function Header() {
           </svg>
         </button>
         <nav
-          className={`absolute inset-y-0 left-full flex w-full -translate-x-0 items-center justify-center bg-white/70 font-medium backdrop-blur-sm backdrop-filter transition duration-500 ease-in-out md:static md:left-0 md:w-auto md:translate-x-0 md:transition-none ${
+          className={`absolute inset-y-0 left-full z-10 flex w-full -translate-x-0 items-center justify-center bg-white/70 font-medium backdrop-blur-sm backdrop-filter transition duration-500 ease-in-out md:static md:left-0 md:w-auto md:translate-x-0 md:transition-none ${
             isOpen ? "-translate-x-full " : "-translate-x-0"
           }`}
         >
@@ -50,7 +50,7 @@ export function Header() {
               className={({ isActive }) =>
                 `${
                   isActive ? "before:scale-100" : "before:scale-0"
-                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-emerald-800 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/"
               onClick={() => {
@@ -64,7 +64,7 @@ export function Header() {
               className={({ isActive }) =>
                 `${
                   isActive ? "before:scale-100" : "before:scale-0"
-                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-emerald-800 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/history"
               onClick={() => {
@@ -78,7 +78,7 @@ export function Header() {
               className={({ isActive }) =>
                 `${
                   isActive ? "before:scale-100" : "before:scale-0"
-                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-zinc-900 before:transition before:duration-300 hover:before:scale-100 md:text-base`
+                } relative p-2 text-center text-xl before:absolute before:bottom-1.5 before:block before:h-0.5 before:w-[calc(100%-theme('padding.4'))] before:origin-left before:bg-emerald-800 before:transition before:duration-300 hover:before:scale-100 md:text-base`
               }
               to="/about"
               onClick={() => {

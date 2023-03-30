@@ -7,3 +7,46 @@
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.fancy-border {
+  background-color: white;
+  display: flex;
+  min-height: 4rem;
+  flex-shrink: 1;
+  flex-grow: 1;
+  border-radius: 9999px;
+  position: relative;
+}
+
+.fancy-border:after,
+.fancy-border:before {
+  content: "";
+  position: absolute;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    darkkhaki,
+    darkolivegreen,
+    darkseagreen,
+    darkseagreen,
+    darkolivegreen,
+    darkkhaki
+  );
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+  z-index: -1;
+}

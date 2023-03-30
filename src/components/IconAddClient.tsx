@@ -6,7 +6,7 @@ export function IconAddClient() {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="h-6 w-6"
+      className="h-6 w-6 transition duration-500 group-hover:scale-150 group-focus-visible:scale-150 group-active:scale-125"
     >
       <path
         strokeLinecap="round"

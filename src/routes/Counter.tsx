@@ -3,6 +3,7 @@ import { IconClient } from "../components/IconClient";
 import { IconSubtractClient } from "../components/IconSubtractClient";
 import { IconAddClient } from "../components/IconAddClient";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { ButtonExample } from "../components/Button";
 
 function Counter() {
   const [storedValue, setLocalStorage] = useLocalStorage("client-counter", [
@@ -60,39 +61,30 @@ function Counter() {
 
   return (
     <div className="container flex  max-w-2xl flex-1 flex-col justify-center gap-4 p-4">
-      <div className="flex h-16 flex-shrink-0 items-center justify-between rounded-3xl border-2 border-slate-700 px-8">
+      <div className="fancy-border w-full items-center justify-between rounded-full px-8 before:-inset-1 after:-inset-1 after:blur-0">
         <IconClient />
-        <span className="text-xl font-medium">{clientNumber}</span>
+        <span className="text-xl font-medium text-emerald-800">
+          {clientNumber}
+        </span>
       </div>
-
       <div className="flex items-center justify-between gap-4">
-        <button
-          onClick={resetCounter}
-          title="Zresetuj licznik"
-          className="h-16 w-1/2 rounded-3xl border-2 border-zinc-900 p-2 text-xl transition duration-200 hover:bg-zinc-900 hover:text-white focus-visible:bg-zinc-900 focus-visible:text-white active:bg-zinc-900 active:text-white"
-          type="button"
-        >
-          Reset
-        </button>
-
-        <button
+        <ButtonExample title="Zresetuj licznik" small onClick={resetCounter}>
+          <span className="text-lg  transition duration-500 group-hover:scale-125 group-focus-visible:scale-150 group-active:scale-105">
+            Reset
+          </span>
+        </ButtonExample>
+        <ButtonExample
+          title="Odejnij klienta"
+          small
           onClick={subtractOneClient}
-          title="Odejmij klienta"
-          className="flex h-16 w-1/2 items-center justify-center rounded-3xl border-2 border-zinc-900 p-2 transition duration-200 hover:bg-zinc-900 hover:text-white focus-visible:bg-zinc-900 focus-visible:text-white active:bg-zinc-900 active:text-white"
-          type="button"
         >
           <IconSubtractClient />
-        </button>
+        </ButtonExample>
       </div>
 
-      <button
-        onClick={addOneClient}
-        title="Dodaj klienta"
-        type="button"
-        className="flex h-full min-h-[4rem] w-full flex-shrink flex-grow items-center justify-center self-center rounded-full border-2 border-zinc-900 transition duration-200 hover:bg-zinc-900 hover:text-white focus-visible:bg-zinc-900 focus-visible:text-white active:bg-zinc-900 active:text-white"
-      >
+      <ButtonExample title="Dodaj klienta" onClick={addOneClient}>
         <IconAddClient />
-      </button>
+      </ButtonExample>
     </div>
   );
 }

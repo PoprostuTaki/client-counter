@@ -1,8 +1,10 @@
 export function About() {
   return (
-    <div className="container my-8 max-w-2xl space-y-8 px-4">
+    <article className="container my-8 max-w-2xl flex-1 space-y-8 px-4">
       <section>
-        <h2 className="text-xl font-medium">Jakie ma możliwości?</h2>
+        <h2 className="text-xl font-medium text-emerald-800">
+          Jakie ma możliwości?
+        </h2>
         <p>
           Podstawową funkcionalnością aplikacji jest zliczanie ilości
           obsłużonych klientów. Po obsłużeniu klienta, pracownik klikając w
@@ -17,8 +19,8 @@ export function About() {
         </p>
       </section>
       <section>
-        <h2 className="text-xl font-medium">Funkcje:</h2>
-        <ul className="list-inside list-disc">
+        <h2 className="text-xl font-medium text-emerald-800">Funkcje:</h2>
+        <ul className="list-inside list-disc marker:text-emerald-800">
           <li>Dodawanie, odejmowanie i zerowanie licznika.</li>
           <li>Automatyczny zapis licznika.</li>
           <li>Automatyczne ładowanie z pamięci aktualnego stanu licznika.</li>
@@ -26,8 +28,10 @@ export function About() {
         </ul>
       </section>
       <section>
-        <h2 className="text-xl font-medium">Planowanie zmiany i dodatki:</h2>
-        <ul className="list-inside list-disc">
+        <h2 className="text-xl font-medium text-emerald-800">
+          Planowanie zmiany i dodatki:
+        </h2>
+        <ul className="list-inside list-disc marker:text-emerald-800">
           <li>Jasne i ciemne tło</li>
           <li>Animacja Loga</li>
           <li>
@@ -38,6 +42,6 @@ export function About() {
           <li>Poprawa dostępności</li>
         </ul>
       </section>
-    </div>
+    </article>
   );
 }

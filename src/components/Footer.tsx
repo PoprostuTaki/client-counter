@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="border-t-2 border-b-zinc-200">
+    <footer className="border-t-2 border-t-emerald-100 text-emerald-800">
       <div className="container mt-auto flex flex-col items-center justify-between gap-2 p-4 sm:flex-row md:px-16">
-        <span>Rafał Piekarski &copy; 2023</span>
-        <div className="flex gap-2 text-zinc-800">
+        <span className="font-semibold">Rafał Piekarski &copy; 2023</span>
+        <div className="flex gap-2 text-emerald-800">
           <Link
             to="https://github.com/PoprostuTaki"
             target="_blank"

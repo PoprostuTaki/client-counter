@@ -1,7 +1,7 @@
 export function IconGitHub() {
   return (
     <svg
-      className="fill-current transition hover:fill-slate-700"
+      className="fill-current transition hover:scale-105 active:scale-95"
       xmlns="http://www.w3.org/2000/svg"
       width="28"
       height="28"
